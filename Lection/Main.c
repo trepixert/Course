@@ -7,13 +7,10 @@
 int main() {
 	char* locale = setlocale(LC_ALL,"");
 
-
 	int firstNumber;
 	int secondNumber;
 	char operation;
 	char status;
-
-
 
 	while (1) {
 		printf("¬ведите операцию: \n");
