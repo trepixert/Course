@@ -13,16 +13,16 @@ int main() {
 	char status;
 
 	while (1) {
-		printf("Введите операцию: \n");
+		printf("Enter operation: \n");
 		scanf(" %c", &operation);
-		printf("Введите первое число: \n");
+		printf("Enter first num: \n");
 		scanf_s("%d", &firstNumber);
-		printf("Введите второе число: \n");
+		printf("Enter second num: \n");
 		scanf_s("%d", &secondNumber);
 
 		printf("%d\n\n", doOperation(operation, firstNumber, secondNumber));
 
-		printf("Завершить работу? y/n \n");
+		printf("Continue? y/n \n");
 		scanf(" %c", &status);
 
 		if (status == 'y') break;
