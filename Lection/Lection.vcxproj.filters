@@ -18,12 +18,12 @@
     <ClCompile Include="Main.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Calculator.c">
+    <ClCompile Include="List.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Calculator.h">
+    <ClInclude Include="List.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,46 +1,23 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "Calculator.h"
 #include <stdio.h>
 #include <locale.h>
+#include "List.h"
 
 int main() {
 	char* locale = setlocale(LC_ALL,"");
 
-	int firstNumber;
-	int secondNumber;
-	char operation;
-	char status;
+	List head = NULL;
+	add(&head, 1, 1);
+	add(&head, 2, 2);
+	add(&head, 14, 4);
+	add(&head, 6, 8);
+	insertFirst(&head, 12, 15);
 
-	while (1) {
-		printf("Enter operation: \n");
-		scanf(" %c", &operation);
-		printf("Enter first num: \n");
-		scanf_s("%d", &firstNumber);
-		printf("Enter second num: \n");
-		scanf_s("%d", &secondNumber);
-
-		printf("%d\n\n", doOperation(operation, firstNumber, secondNumber));
-
-		printf("Continue? y/n \n");
-		scanf(" %c", &status);
-
-		if (status == 'y') break;
-	}
+	printf("Вывод:\n");
+	print(&head);
+	printf("Найдено значение: %d по ключу: %d\n", findDataByKey(&head, 14), 14);
+	printf("Удалено значение: %d по ключу: %d\n", del(&head, 14), 14);
+	print(&head);
 	return 0;
-}
-
-int doOperation(char operation, int first, int second) {
-	switch (operation) {
-		case '+':
-			return sum(first,second);
-		case '-':
-			return minus(first, second);
-		case '*':
-			return multiply(first, second);
-		case '/':
-			return division(first, second);
-		case '!':
-			return factorial(first);
-	}
 }
