@@ -14,10 +14,10 @@ int main() {
 	add(&head, 6, 8);
 	insertFirst(&head, 12, 15);
 
-	printf("Вывод:\n");
+	printf("Р’С‹РІРѕРґ:\n");
 	print(&head);
-	printf("Найдено значение: %d по ключу: %d\n", findDataByKey(&head, 14), 14);
-	printf("Удалено значение: %d по ключу: %d\n", del(&head, 14), 14);
+	printf("РќР°Р№РґРµРЅРѕ Р·РЅР°С‡РµРЅРёРµ: %d РїРѕ РєР»СЋС‡Сѓ: %d\n", findDataByKey(&head, 14), 14);
+	printf("РЈРґР°Р»РµРЅРѕ Р·РЅР°С‡РµРЅРёРµ: %d РїРѕ РєР»СЋС‡Сѓ: %d\n", del(&head, 14), 14);
 	print(&head);
 	return 0;
 }
